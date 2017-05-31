@@ -1,16 +1,10 @@
 import React, { Component } from 'react'
 import TodoList from './TodoList.js'
+import Form from './Form.js'
+import Actions from './Actions.js'
 
 const Header = () =>(
   <div className="header">TODO</div>
-)
-
-const Form = () =>(
-  <div className="form">Form</div>
-)
-
-const Actions = () =>(
-  <div className="actions">Actions</div>
 )
 
 class Main extends Component {

@@ -21,7 +21,6 @@ li {
 .main {
   background-color: #fff;
   width: 567px;
-  height: 628px;
   margin: 200px auto;
   box-shadow: 0 2px 4px 0;
 }
@@ -34,12 +33,12 @@ li {
 }
 
 .todo-list {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   height: 280px;
 }
 .todo-list .container {
   margin: 20px 120px;
-  border: 1px solid green;
+  /*border: 1px solid green;*/
   height: 240px;
   overflow: auto;
 }
@@ -48,13 +47,84 @@ li {
   line-height: 60px;
   font-size: 24px;
 }
+.todo-list li.completed{
+  text-decoration: line-through;
+  color: #989891;
+  position: relative;
+}
+.todo-list li.completed:after{
+  content: ' ';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  background-image: url('/img/right-tick.svg');
+  position: absolute;
+  right:0;
+  top:15px;
+}
 
 .form {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   height: 110px;
+}
+.form .container{
+  width: 400px;
+  margin: 40px auto;
+  position: relative;
+}
+.form .text-input{
+    width: 360px;
+    height: 40px;
+    background-color: #D8D8D8;
+    padding-left: 20px;
+    font-size: 1.3em;
+}
+.form .submit-btn{
+  position: absolute;
+  right: 0;
+  top: -15px;
+  border: none;
+  width: 70px;
+  height: 70px;
+  display: block;
+  float: right;
+  background-color: #84de1e;
+  border-radius: 50%;
+  background-image: url('/img/add.svg');
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.form .submit:focus {
+  outline: none;
 }
 
 .actions {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   height: 110px;
+}
+.actions .container{
+  width: 190px;
+  margin: 20px auto;
+}
+.container div {
+  width: 50px;
+  height: 50px;
+  background-size: 40;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.actions .list {
+  float: left;
+  background-image: url(/img/all.svg);
+  background-size: cover;
+}
+
+.actions .completed {
+  float: right;
+  background-image: url(/img/right-tick.svg);
+  background-size: cover;
 }
